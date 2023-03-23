@@ -1,4 +1,4 @@
-# sell-buy
+# Simple Online Shop
 This is a simple web application that allows users to create accounts, log in, and view a list of products. It is built using Flask and SQLite.
 
 ## Installation
