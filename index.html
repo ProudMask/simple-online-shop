@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Abaya Shop</title>
-  </head>
-  <body>
-    <h1>Products</h1>
-    <ul>
-      {% for product in products %}
-      <li>{{ product.name }} - ${{ product.price }}</li>
-      {% endfor %}
-    </ul>
-  </body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Abaya Shop Demo</title></head>
+<body><h1>Abaya Shop Demo</h1><nav><a href="{{ url_for('auth.register') }}">Create account</a> | <a href="{{ url_for('auth.login') }}">Log in</a> | <a href="{{ url_for('auth.dashboard') }}">Dashboard</a></nav>
+<h2>Products</h2><ul>{% for product in products %}<li><h3>{{ product.name }}</h3><p>{{ product.description }}</p><p>AED {{ '%.2f'|format(product.price) }}</p></li>{% else %}<li>No products yet. Run the documented seed-demo command.</li>{% endfor %}</ul><p>Synthetic catalog demonstration; no checkout or payments.</p></body></html>
